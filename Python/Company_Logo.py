@@ -33,6 +33,29 @@ Note: The string "s" has at least  distinct characters.
 
 '''
 
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    s = input()
+    dic={}
+    for x in s:
+        if x not in dic:
+            dic[x]=1
+        else:
+            dic[x]+=1
+    l= sorted(dic.items(),key=lambda item: (-item[1],item[0]))
+    for n in range(3):
+        print(l[n][0],l[n][1]) 
+
+
 
 
 
